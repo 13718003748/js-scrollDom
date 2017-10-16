@@ -171,6 +171,8 @@
 				//播放按钮
 				btn.onclick = function() {
 					if(stop === true) {
+						//播放时还原到原始大小
+						$("#wrap").css({transform:"scale(1)"});
 						var $this = this;
 						oWrap.timer = setInterval(function() {
 							var dis = parseInt(getStyle(oWrap, 'left')) - 5;
